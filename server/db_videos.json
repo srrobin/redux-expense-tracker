@@ -1,0 +1,22 @@
+{
+  "transactions": [
+    {
+      "name": "test 5",
+      "amount": 50000,
+      "type": "expense",
+      "id": 5
+    },
+    {
+      "name": "test 3",
+      "type": "income",
+      "amount": 4000,
+      "id": 6
+    },
+    {
+      "name": "salary ",
+      "type": "income",
+      "amount": 300000,
+      "id": 7
+    }
+  ]
+}
