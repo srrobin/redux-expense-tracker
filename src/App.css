@@ -22,8 +22,14 @@ ul{
   justify-content: space-between;
   gap: 10px;
 }
-.balance_area,.expense_area li{
+.balance_area{
   background: #e9ecef;
+  padding: 10px;
+  border-radius: 6px;
+  margin-block-end: 20px;
+  text-transform: capitalize;
+}
+.expense_area li{
   padding: 10px;
   border-radius: 6px;
   margin-block-end: 20px;

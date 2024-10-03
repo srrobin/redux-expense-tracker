@@ -1,38 +1,30 @@
-import React from 'react';
-import { Button } from 'react-bootstrap';
+import React, { useEffect } from 'react';
+import Loading from '../utils/Loading';
+import { useDispatch, useSelector } from 'react-redux';
+import { getTransAsync } from '../features/transactions/transactionsSlice';
+import SingleList from './SingleList';
 
 const ExpenseList = () => {
+    const dispatch = useDispatch();
+    const {transactions, isLoading, isError, error} = useSelector((state)=> state.trans);
+    
+    useEffect(() => {
+       dispatch(getTransAsync());
+    },[dispatch])
+
+    let content;
+
+    if(isLoading) content = <Loading/>
+    if(!isLoading && isError) content = <>{error}</>
+    if(!isLoading && !isError && transactions.length === 0) content = <> there area some error ...</>
+    if(!isLoading && !isError && transactions.length > 0) content = 
+    transactions?.map((item) => ( 
+     <SingleList key={item.id} item={item}/>
+    ));
     return (
         <div className='expense_area'>
             <ul>
-                <li className='display_flex'> 
-                    <div className='title'>earned this month</div>
-                    <div className='amount_action display_flex'>
-                        <div className='amount'>tk. 1000</div>
-                        <div className='action display_flex'>
-                        <Button variant="success" size="sm">
-                        Edit
-                        </Button>
-                        <Button variant="danger" size="sm">
-                        delete
-                        </Button>
-                        </div>
-                    </div>
-                </li>
-                <li className='display_flex'> 
-                    <div className='title'>earned this month</div>
-                    <div className='amount_action display_flex'>
-                        <div className='amount'>tk. 1000</div>
-                        <div className='action display_flex'>
-                        <Button variant="success" size="sm">
-                        Edit
-                        </Button>
-                        <Button variant="danger" size="sm">
-                        delete
-                        </Button>
-                        </div>
-                    </div>
-                </li>
+               {content}
             </ul>
         </div>
     );
