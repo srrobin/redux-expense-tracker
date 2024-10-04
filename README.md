@@ -1,46 +1,54 @@
-# Getting Started with Create React App and Redux
+# Expense Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+An **Expense Tracker** application built using **Redux Toolkit**, **React.js**, and **React-Bootstrap**. This app allows users to track their income and expenses and provides a current balance overview.
+![POS System](https://github.com/srrobin/redux-expense-tracker/blob/main/src/assets/e1.png))
+## Features
 
-## Available Scripts
+- **Track Income & Expenses**: Add transactions to track income and expenses separately.
+- **Calculate Balance**: View the current balance based on total income and expenses.
+- **Responsive Design**: Built with React-Bootstrap to provide a responsive, user-friendly interface.
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+- **React.js**: For building the UI.
+- **Redux Toolkit**: For managing application state.
+- **React-Bootstrap**: For responsive styling and layout.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
 
-### `npm test`
+    ```bash
+    git clone https://github.com/srrobin/redux-expense-tracker
+    cd expense-tracker
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
 
-### `npm run build`
+    ```bash
+    npm install
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Run the application:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    npm start
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Add Income**: Enter the amount and source, then click "Add Income" to add an income transaction.
+2. **Add Expense**: Enter the amount and description, then click "Add Expense" to add an expense transaction.
+3. **View Balance**: The balance automatically updates based on income and expenses.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributing
 
-## Learn More
+Feel free to submit issues, fork the repository, and make pull requests. Contributions are welcome!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the MIT License.
